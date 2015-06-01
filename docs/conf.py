@@ -28,6 +28,9 @@ extensions = [
 #              'sphinx.ext.extlinks'
               'sphinx.ext.ifconfig',
 #              'sphinxcontrib.exceltable',
+#              'sphinxcontrib.napoleon',
+              'sphinxcontrib.bibtex',
+#              'sphinxcontrib.httpdomain',
               'sphinxcontrib.images',
               'sphinxcontrib.jsdemo',
              ]
