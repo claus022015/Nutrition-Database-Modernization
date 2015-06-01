@@ -16,8 +16,6 @@ Nutrition Database Modernization
 
 .. image:: _static/$_01-docs-latest_.svg
 
-* :ref:`Index of Glossary Terms <genindex>`
-
 -----------------------------
 
 Table of Contents
