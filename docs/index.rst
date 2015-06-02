@@ -16,11 +16,6 @@ Nutrition Database Modernization
 
 .. image:: _static/$_01-docs-latest_.svg
 
------------------------------
-
-Table of Contents
------------------
-
 .. toctree::
    :hidden:
 
