@@ -18,27 +18,6 @@ Nutrition Database Modernization
 
 -----------------------------
 
-Table of Contents
------------------
-
-.. toctree::
-   :maxdepth: 2
-
-   01/$_convention.rst
-   00_dir/$_00-prologue.rst
-   01_dir/$_01-convention.rst
-   02_dir/$_02-core.rst
-   03_dir/$_03-detail.rst
-   04_dir/$_04-fda.rst
-   06_dir/$_06-future.rst
-   07_dir/$_07-glossary.rst
-   10_dir/$_10-term-project.rst
-   11_dir/$_11-term-ontology.rst
-   13_dir/$_13-bibliography.rst
-   15_dir/$_15-ontomatica.rst
-   12_dir/$_12-epilogue.rst
-
-
 License
 ^^^^^^^
 
