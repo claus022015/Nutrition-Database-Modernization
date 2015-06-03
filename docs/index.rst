@@ -17,7 +17,7 @@ Nutrition Database Modernization
 .. image:: _static/$_01-docs-latest_.svg
 
 .. toctree::
-   :hidden:
+   :includehidden:
 
    01/$_convention.rst
    00_dir/$_00-prologue.rst
