@@ -56,8 +56,6 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = u'CasperJS'
-copyright = (u'2011-2015 Nicolas Perriault and contributors. CasperJS logo by Jeremy Forveille')
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -215,7 +213,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-   ('index', 'casperjs.tex', 'CasperJs Documentation',
+   ('index', 'casperjs.tex',
    'Nicolas Perriault', 'manual'),
 ]
 
@@ -245,7 +243,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'casperjs', u'casperjs documentation', [u'Nicolas Perriault'], 1)
+    ('index', 'casperjs', [u'Nicolas Perriault'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -258,7 +256,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'CasperJS', u'CasperJS Documentation',
+  ('index', 'CasperJS',
    u'Nicolas Perriault', 'CasperJS', 'CasperJS docs.', 'Miscellaneous'),
 ]
 
