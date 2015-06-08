@@ -27,6 +27,12 @@ extensions = [
               'sphinx.ext.autodoc',
 #              'sphinx.ext.extlinks'
               'sphinx.ext.ifconfig',
+              'sphinx.ext.doctest',
+              'sphinx.ext.coverage',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.ifconfig',
+              'sphinx.ext.viewcode',
+              'sphinx.ext.intersphinx',
 #              'sphinxcontrib.exceltable',
               'sphinxcontrib.bibtex',
               'sphinxcontrib.images',
