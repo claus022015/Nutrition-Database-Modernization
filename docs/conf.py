@@ -212,10 +212,7 @@ latex_elements = {
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [
-   ('index', 'casperjs.tex',
-   'Nicolas Perriault', 'manual'),
-]
+
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
@@ -242,9 +239,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    ('index', 'casperjs', [u'Nicolas Perriault'], 1)
-]
+
 
 # If true, show URL addresses after external links.
 #man_show_urls = False
@@ -255,10 +250,7 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-  ('index', 'CasperJS',
-   u'Nicolas Perriault', 'CasperJS', 'CasperJS docs.', 'Miscellaneous'),
-]
+
 
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []
