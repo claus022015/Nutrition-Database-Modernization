@@ -57,6 +57,9 @@ master_doc = 'index'
 
 # General information about the project.
 
+# Project information. Label goes into left nav title block
+project = 'USDA Nutrition Database'
+
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
