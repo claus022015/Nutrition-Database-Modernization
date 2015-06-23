@@ -17,7 +17,6 @@ import sys, os
 
 # Default is 'local' building, but reference the public WWW site when building
 # under RTD.
-target = join(dirname(__file__), '..', 'docs', '_build')
 if os.environ.get('READTHEDOCS') == 'True':
     target = 'http://www.nutritiondatabase.org/'
 
