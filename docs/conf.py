@@ -10,11 +10,16 @@ import sys, os
 
 #from datetime import date
 
-CURDIR = os.path.abspath(os.path.dirname(__file__))
+##CURDIR = os.path.abspath(os.path.dirname(__file__))
 
-sys.path.append(os.path.abspath('sphinxext'))
-#sys.path.insert(0, os.path.abspath('.'))
+##sys.path.append(os.path.abspath('sphinxext'))
+##sys.path.insert(0, os.path.abspath('.'))
 
+# Default is 'local' building, but reference the public WWW site when building
+# under RTD.
+target = join(dirname(__file__), '..', 'docs', '_build')
+if os.environ.get('READTHEDOCS') == 'True':
+    target = 'http://www.nutritiondatabase.org/'
 
 # -- General configuration -----------------------------------------------------
 
