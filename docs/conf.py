@@ -30,11 +30,6 @@ intersphinx_mapping = {
     'docs': (target, None),
 }
 
-# Sister-site links to API docs
-html_theme_options['extra_nav_links'] = {
-    "API Docs": 'http://docs.fabfile.org',
-}
-
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
