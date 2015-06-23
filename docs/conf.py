@@ -20,7 +20,6 @@ import os
 from os.path import abspath, join, dirname
 
 sys.path.append(abspath(join(dirname(__file__), '..')))
-from shared_conf import *
 
 # Intersphinx for referencing API/usage docs
 extensions.append('sphinx.ext.intersphinx')
