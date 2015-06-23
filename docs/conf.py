@@ -21,8 +21,6 @@ from os.path import abspath, join, dirname
 
 sys.path.append(abspath(join(dirname(__file__), '..')))
 
-# Intersphinx for referencing API/usage docs
-extensions.append('sphinx.ext.intersphinx')
 # Default is 'local' building, but reference the public docs site when building
 # under RTD.
 target = join(dirname(__file__), '..', 'docs', '_build')
