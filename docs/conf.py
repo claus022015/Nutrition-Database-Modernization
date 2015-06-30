@@ -25,7 +25,7 @@ sys.path.append(abspath(join(dirname(__file__), '..', '..')))
 # under RTD.
 target = join(dirname(__file__), '..', 'docs', '_build')
 if os.environ.get('READTHEDOCS') == 'True':
-    target = 'http://docs.ontomatica.org/en/latest/'
+    target = 'http://docs.nutrition-database-modenization.org'
 
 
 # -- General configuration -----------------------------------------------------
