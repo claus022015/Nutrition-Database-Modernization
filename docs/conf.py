@@ -23,9 +23,9 @@ sys.path.append(abspath(join(dirname(__file__), '..', '..')))
 
 # Default is 'local' building, but reference the public docs site when building
 # under RTD.
-target = join(dirname(__file__), '..', 'docs', '_build')
+CURDIR = os.path.abspath(os.path.dirname(__file__))
 if os.environ.get('READTHEDOCS') == 'True':
-    target = 'http://docs.nutrition-database-modenization.org'
+    target = 'http://docs.nutrition-database.org/en/latest/'
 
 
 # -- General configuration -----------------------------------------------------
