@@ -25,7 +25,7 @@ sys.path.append(abspath(join(dirname(__file__), '..', '..')))
 # under RTD.
 CURDIR = os.path.abspath(os.path.dirname(__file__))
 if os.environ.get('READTHEDOCS') == 'True':
-    target = 'http://docs.nutrition-database.org/en/latest/'
+    target = 'http://docs.nutrition-database-modernization.org/en/latest/'
 
 
 # -- General configuration -----------------------------------------------------
