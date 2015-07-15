@@ -1,0 +1,1 @@
+.. _homepage: http://docs.afdsi.org/en/latest
