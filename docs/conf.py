@@ -18,7 +18,7 @@
 import os, sys
 from datetime import date
 if os.environ.get('READTHEDOCS') == 'True':
-    target = 'http://docs.afdsi.org/en/latest/'
+    target = 'http://docs.afdsi.org'
 
 # Default is 'local' building, but reference the public docs site when building
 # under RTD.
