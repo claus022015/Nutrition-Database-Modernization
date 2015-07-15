@@ -17,16 +17,12 @@
 
 import os, sys
 from datetime import date
-from os.path import abspath, join, dirname
-sys.path.append(abspath(join(dirname(__file__), '..')))
-sys.path.append(abspath(join(dirname(__file__), '..', '..')))
-
-# Default is 'local' building, but reference the public docs site when building
-# under RTD.
-CURDIR = os.path.abspath(os.path.dirname(__file__))
 if os.environ.get('READTHEDOCS') == 'True':
     target = 'http://docs.afdsi.org/en/latest/'
 
+# Default is 'local' building, but reference the public docs site when building
+# under RTD.
+#CURDIR = os.path.abspath(os.path.dirname(__file__))
 
 # -- General configuration -----------------------------------------------------
 
