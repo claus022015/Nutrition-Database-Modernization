@@ -15,6 +15,7 @@ class LightBox2(images.Backend):
         'lightbox2/img/loading.gif',
     )
 
+
     def visit_image_node_html(self, writer, node):
         # make links local (for local images only)
         builder = self._app.builder
