@@ -6,19 +6,19 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
-##import sys, os
+import sys, os
 
-#from datetime import date
-
-##CURDIR = os.path.abspath(os.path.dirname(__file__))
-
-##sys.path.append(os.path.abspath('sphinxext'))
-##sys.path.insert(0, os.path.abspath('.'))
-
-import os, sys
 from datetime import date
-if os.environ.get('READTHEDOCS') == 'True':
-    target = 'http://docs.afdsi.org'
+
+CURDIR = os.path.abspath(os.path.dirname(__file__))
+
+sys.path.append(os.path.abspath('sphinxext'))
+sys.path.insert(0, os.path.abspath('.'))
+
+###import os, sys
+###from datetime import date
+###if os.environ.get('READTHEDOCS') == 'True':
+###    target = 'http://docs.afdsi.org'
 
 # Default is 'local' building, but reference the public docs site when building
 # under RTD.
