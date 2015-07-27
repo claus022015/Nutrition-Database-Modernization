@@ -28,7 +28,7 @@ setup(
     url='https://github.com/spinus/sphinxcontrib-images',
     download_url='https://pypi.python.org/pypi/sphinxcontrib-images',
     license='Apache 2',
-    author=u'Tomasz Czyż',
+    author=u'Tomasz CzyÅ¼',
     author_email='tomasz.czyz@gmail.com',
     description='Sphinx "images" extension',
     long_description=open('README.rst').read(),
