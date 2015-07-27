@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 __version__ = '0.5.0'
-__author__ = 'Tomasz Czyż <tomaszczyz@gmail.com>'
+__author__ = 'Tomasz CzyÅ¼ <tomaszczyz@gmail.com>'
 __license__ = "Apache 2"
 
 
@@ -54,6 +54,12 @@ class Backend(object):
     def __init__(self, app):
         self._app = app
 
+    def visit_image_node_fallback(self, writer, node):
+        writer.visit_image(node)
+
+    def depart_image_node_fallback(self, writer, node):
+        writer.depart_image(node)
+
 
 class image_node(nodes.image, nodes.General, nodes.Element):
     pass
@@ -96,6 +102,7 @@ class ImageDirective(Directive):
         'width': directives.length_or_percentage_or_unitless,
         'height': directives.length_or_unitless,
         'strech': directives.choice,
+        'thumbnail': directives.unchanged,
 
         'group': directives.unchanged,
         'class': directives.class_option,  # or str?
@@ -118,6 +125,7 @@ class ImageDirective(Directive):
         alt = self.options.get('alt', '')
         title = self.options.get('title', '' if conf['default_show_title'] else None)
         align = self.options.get('align', '')
+        thumbnail_uri = self.options.get('thumbnail', '')
 
         #TODO get default from config
         download = self.options.get('download', conf['download'])
@@ -147,6 +155,25 @@ class ImageDirective(Directive):
             img['uri'] = self.arguments[0]
             img['remote'] = False
             env.images.add_file('', img['uri'])
+
+        if thumbnail_uri:
+            if self.is_remote(thumbnail_uri):
+                img['thumbnail_remote'] = True
+                if download:
+                    img['thumbnail_uri'] = os.path.join('_images', hashlib.sha1(thumbnail_uri.encode()).hexdigest())
+                    img['thumbnail_remote_uri'] = thumbnail_uri
+                    env.remote_images[img['thumbnail_remote_uri']] = img['thumbnail_uri']
+                    env.images.add_file('', img['thumbnail_uri'])
+                else:
+                    img['thumbnail_uri'] = thumbnail_uri
+                    img['thimbnail_remote_uri'] = thumbnail_uri
+            else:
+                img['thumbnail_uri'] = thumbnail_uri
+                img['thumbnail_remote'] = False
+                env.images.add_file('', img['thumbnail_uri'])
+        else:
+            img['thumbnail_uri'] = None
+            img['thumbnail_remote'] = None
 
         img['content'] = description.astext()
 
@@ -288,13 +315,6 @@ def configure_backend(app):
     app.info('`{}`'.format(str(backend.__class__.__module__ +
                            ':' + backend.__class__.__name__)))
 
-    def not_supported(writer, node):
-        raise NotImplementedError('Sorry, but backend `{}` does not support '
-                                  'writing node `{}` by writer `{}`'
-                                  .format(backend.__class__.__name__,
-                                          node.__class__.__name__,
-                                          writer.__class__.__name__))
-
     def backend_methods(node, output_type):
         def backend_method(f):
             @functools.wraps(f)
@@ -303,9 +323,9 @@ def configure_backend(app):
             return inner_wrapper
         signature = '_{}_{}'.format(node.__name__, output_type)
         return (backend_method(getattr(backend, 'visit' + signature,
-                                       not_supported)),
+                               getattr(backend, 'visit_' + node.__name__ + '_fallback'))),
                 backend_method(getattr(backend, 'depart' + signature,
-                                       not_supported)))
+                               getattr(backend, 'depart_' + node.__name__ + '_fallback'))))
 
 
     # add new node to the stack
@@ -313,7 +333,7 @@ def configure_backend(app):
     app.add_node(image_node,
                  **{output_type: backend_methods(image_node, output_type)
                     for output_type in ('html', 'latex', 'man', 'texinfo',
-                                        'text')})
+                                        'text', 'epub')})
 
     app.add_directive('thumbnail', ImageDirective)
     if config['override_image_directive']:
