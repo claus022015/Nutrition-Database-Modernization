@@ -5,8 +5,6 @@
     <link rel="alternate stylesheet" title="Light theme" href="{{ pathto('_static/casperjs-light.css', 1) }}">
     <script type="text/javascript" src="{{ pathto('_static/style-switcher.js', 1) }}"></script>
 
-{% extends "!layout.html" %}
-
 {{ super() }}
 <!-- RTD Extra Head -->
 {% set ending = "/" if builder == "readthedocsdirhtml" else ".html" %}
