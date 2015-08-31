@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath('.'))
 ###import os, sys
 ###from datetime import date
 if os.environ.get('READTHEDOCS') == 'True':
-    target = 'http://docs.nutrition-database-modernization.org'
+    target = 'http://docs.afdsi.org'
 
 # Default is 'local' building, but reference the public docs site when building
 # under RTD.
