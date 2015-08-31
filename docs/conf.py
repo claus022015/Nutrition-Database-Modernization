@@ -17,8 +17,8 @@ sys.path.insert(0, os.path.abspath('.'))
 
 ###import os, sys
 ###from datetime import date
-###if os.environ.get('READTHEDOCS') == 'True':
-###    target = 'http://www.afdsi.org'
+if os.environ.get('READTHEDOCS') == 'True':
+    target = 'http://docs.ontomatica.org'
 
 # Default is 'local' building, but reference the public docs site when building
 # under RTD.
