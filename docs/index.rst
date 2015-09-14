@@ -12,7 +12,7 @@ Customized message
 
     Preamble
     --------
-
+    01/$_convention.rst
 .. toctree::
     Summary
 
@@ -25,7 +25,7 @@ Customized message
 .. toctree::
     :numbered:
 
-    01/$_convention.rst
+   01/$_convention.rst
    00_dir/$_00-prologue.rst
    01_dir/$_01-convention.rst
    02_dir/$_02-core.rst
