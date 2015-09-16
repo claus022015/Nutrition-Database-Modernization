@@ -25,11 +25,11 @@ Customized message
 .. toctree::
     :numbered:
 
-   01/$_convention.rst
-   00_dir/$_00-prologue.rst
-   01_dir/$_01-convention.rst
-   02_dir/$_02-core.rst
-   03_dir/$_03-detail.rst
+   01/index.rst
+   00_dir/index.rst
+   01_dir/index.rst
+   02_dir/index.rst
+   03_dir/index.rst
    04_dir/$_04-fda.rst
    06_dir/$_06-future.rst
    07_dir/$_07-glossary.rst
