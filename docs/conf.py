@@ -45,7 +45,6 @@ extensions = [
               'sphinxcontrib.bibtex',
               'sphinxcontrib.images',
               'sphinxcontrib.jsdemo',
-               'subfig',
               'numfig',
               'numsec',
               'natbib',
